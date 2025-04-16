@@ -3,1192 +3,673 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Владислав Сапон - Кандидат на голову СР ІАТЕ</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Програма на голову СР ІАТЕ - Сапон Владислав</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Roboto:wght@300;400;700&display=swap');
+        
         :root {
-            --dark-purple: #2F2156; 
-            --pale-yellow: #F4F2AA; 
-            --orange: #E62F1B; 
-            --text-light: #ffffff;
-            --text-dark: #333333;
-            --background: #f8f8f8;
-            --gradient-purple: linear-gradient(135deg, #2F2156 0%, #473080 100%);
-            --shadow: 0 10px 30px rgba(47, 33, 86, 0.2);
+            --main-purple: #2F2156;
+            --pale-yellow: #F4F2AA;
+            --orange-red: #E62F1B;
+            --light-purple: #4b3880;
+            --text-on-dark: #ffffff;
+            --text-on-light: #2F2156;
         }
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Montserrat', 'Arial', sans-serif;
         }
         
         body {
-            background-color: var(--background);
-            color: var(--text-dark);
+            font-family: 'Roboto', Arial, sans-serif;
+            background: var(--main-purple);
+            color: var(--text-on-dark);
             line-height: 1.6;
-            overflow-x: hidden;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234b3880' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-attachment: fixed;
         }
         
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            position: relative;
-            z-index: 2;
-        }
-        
-        /* Навігація */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(47, 33, 86, 0.95);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-        }
-        
-        nav.scrolled {
-            padding: 0.8rem 0;
-        }
-        
-        .nav-logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--pale-yellow);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .nav-logo span {
-            color: var(--orange);
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-        
-        .nav-links a {
-            color: var(--pale-yellow);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1rem;
-            position: relative;
-            padding: 0.5rem 0;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--orange);
-            transition: width 0.3s ease;
-        }
-        
-        .nav-links a:hover {
-            color: var(--orange);
-        }
-        
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-        
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--pale-yellow);
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        
-        /* Шапка */
-        header {
-            position: relative;
-            height: 100vh;
-            min-height: 700px;
-            display: flex;
-            align-items: center;
+            max-width: 1000px;
+            margin: 30px auto;
+            background: linear-gradient(135deg, var(--main-purple), var(--light-purple));
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
             overflow: hidden;
-            margin-top: 0;
-            padding-top: 80px;
+            position: relative;
         }
         
-        .header-bg {
+        .container::before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: var(--gradient-purple);
-            z-index: 1;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='white' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            z-index: 0;
         }
         
-        .header-content {
+        .content {
             position: relative;
-            z-index: 2;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 3rem;
+            z-index: 1;
+            padding: 0 0 40px;
         }
         
-        .header-text {
-            flex: 1;
-            color: var(--text-light);
+        header {
+            background-color: var(--main-purple);
+            padding: 50px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 5px solid var(--orange-red);
         }
         
-        .header-title {
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%234b3880' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%234b3880' fill-opacity='0.05'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+        
+        h1 {
+            font-family: 'Montserrat', sans-serif;
             font-size: 3.5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
             font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-            color: var(--pale-yellow);
-            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            position: relative;
         }
         
-        .header-subtitle {
+        h1::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: var(--orange-red);
+            margin: 15px auto;
+        }
+        
+        .subtitle {
             font-size: 1.5rem;
-            font-weight: 400;
-            margin-bottom: 2rem;
-            color: rgba(244, 242, 170, 0.9);
-            max-width: 600px;
+            margin-top: 10px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            opacity: 0.9;
         }
         
-        .header-image {
-            flex: 1;
-            max-width: 500px;
+        .hero-section {
+            background-color: var(--pale-yellow);
+            color: var(--text-on-light);
+            padding: 40px;
             position: relative;
+            overflow: hidden;
         }
         
-        .profile-picture {
-            width: 380px;
-            height: 380px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 6px solid var(--orange);
-            box-shadow: var(--shadow);
-            position: relative;
-            z-index: 2;
-        }
-        
-        .profile-blob {
+        .hero-section::before {
+            content: '';
             position: absolute;
-            top: -20px;
-            left: -20px;
-            width: 420px;
-            height: 420px;
-            background-color: rgba(244, 242, 170, 0.2);
-            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-            animation: blob-animation 8s ease-in-out infinite;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232F2156' fill-opacity='0.05'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            z-index: 0;
+        }
+        
+        .profile {
+            display: flex;
+            align-items: center;
+            position: relative;
             z-index: 1;
         }
         
-        @keyframes blob-animation {
-            0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-            50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
-            100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+        .profile-image-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin-right: 40px;
+            flex-shrink: 0;
         }
         
-        .scroll-down {
+        .profile-image-bg {
             position: absolute;
-            bottom: 40px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: var(--pale-yellow);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-            opacity: 0.8;
-            transition: all 0.3s ease;
+            width: 100%;
+            height: 100%;
+            background: var(--main-purple);
+            border-radius: 15px;
+            transform: rotate(45deg);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        
+        .profile-image {
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 4px solid var(--orange-red);
+            top: 10px;
+            left: 10px;
             z-index: 2;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
         
-        .scroll-down:hover {
-            opacity: 1;
-            transform: translateX(-50%) translateY(5px);
+        .intro {
+            flex: 1;
+            position: relative;
         }
         
-        .scroll-down .arrow {
+        .intro p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            color: var(--pale-yellow);
+            margin: 40px 0 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+            position: relative;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        h2::before, h2::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 60px;
+            height: 3px;
+            background: var(--orange-red);
+        }
+        
+        h2::before {
+            left: 50%;
+            margin-left: -150px;
+        }
+        
+        h2::after {
+            right: 50%;
+            margin-right: -150px;
+        }
+        
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.6rem;
+            color: var(--pale-yellow);
+            margin: 30px 0 15px;
+            padding-left: 40px;
+            position: relative;
+        }
+        
+        h3::before {
+            content: '✦';
+            position: absolute;
+            left: 10px;
+            color: var(--orange-red);
+            font-size: 1.5rem;
+        }
+        
+        .section {
+            margin: 30px 40px;
+            position: relative;
+            padding: 25px;
+            background: rgba(47, 33, 86, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(244, 242, 170, 0.1);
+        }
+        
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(75, 56, 128, 0.3), transparent);
+            border-radius: 10px;
+            z-index: -1;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        
+        ul li {
+            position: relative;
+            margin-bottom: 15px;
+            padding-left: 25px;
+            line-height: 1.7;
+        }
+        
+        ul li::before {
+            content: "►";
+            color: var(--orange-red);
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 0.8rem;
+        }
+        
+        ul ul li::before {
+            content: "•";
+            color: var(--pale-yellow);
+        }
+        
+        .achievement-list {
+            counter-reset: achievements;
+            padding-left: 40px;
+        }
+        
+        .achievement-list li {
+            padding-left: 0;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .achievement-list li::before {
+            content: counter(achievements);
+            counter-increment: achievements;
+            position: absolute;
+            left: -40px;
+            top: -5px;
             width: 30px;
             height: 30px;
-            border: 2px solid;
+            background: var(--orange-red);
+            color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-weight: bold;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
         }
         
-        /* Парні декоративні елементи */ 
-        .shape {
-            position: absolute;
-            z-index: 1;
-            opacity: 0.4;
-        }
-        
-        .shape-1 {
-            top: 15%;
-            left: 5%;
-            width: 150px;
-            height: 150px;
-            background: var(--pale-yellow);
-            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        .shape-2 {
-            bottom: 10%;
-            right: 5%;
-            width: 120px;
-            height: 120px;
-            background: var(--orange);
-            border-radius: 58% 42% 38% 62% / 42% 55% 45% 58%;
-            animation: float 8s ease-in-out infinite;
-        }
-        
-        .shape-3 {
-            top: 50%;
-            right: 15%;
-            width: 80px;
-            height: 80px;
-            background: var(--pale-yellow);
-            border-radius: 67% 33% 47% 53% / 37% 20% 80% 63%;
-            animation: float 10s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0% { transform: translate(0, 0) rotate(0deg); }
-            50% { transform: translate(15px, 15px) rotate(5deg); }
-            100% { transform: translate(0, 0) rotate(0deg); }
-        }
-        
-        /* Секції */
-        section {
-            padding: 6rem 0;
-            position: relative;
-        }
-        
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 3rem;
-            color: var(--dark-purple);
+        .vision-box {
+            background: var(--orange-red);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 40px;
             text-align: center;
             position: relative;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
         }
         
-        .section-title::after {
+        .vision-box::before {
             content: '';
             position: absolute;
-            bottom: -15px;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 60%);
+            z-index: 0;
+        }
+        
+        .vision-box h2 {
+            color: white;
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .vision-box h2::before, .vision-box h2::after {
+            background: rgba(255, 255, 255, 0.5);
+        }
+        
+        .vision-box p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            position: relative;
+            z-index: 1;
+            font-weight: 300;
+        }
+        
+        .plans-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0 30px;
+        }
+        
+        .plan-column {
+            flex: 1;
+            min-width: 300px;
+            margin: 10px;
+        }
+        
+        .diamond-separator {
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 40px 0;
+            position: relative;
+        }
+        
+        .diamond-separator::before, .diamond-separator::after {
+            content: '';
+            height: 1px;
+            flex-grow: 1;
+            background: linear-gradient(90deg, transparent, rgba(244,242,170,0.3), transparent);
+        }
+        
+        .diamond {
+            width: 15px;
+            height: 15px;
+            background: var(--orange-red);
+            transform: rotate(45deg);
+            margin: 0 20px;
+            box-shadow: 0 0 10px rgba(230, 47, 27, 0.5);
+        }
+        
+        footer {
+            margin: 40px auto 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-style: italic;
+            padding: 20px;
+            background: var(--main-purple);
+            border-radius: 0 0 15px 15px;
+            position: relative;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: var(--orange);
-            border-radius: 2px;
-        }
-        
-        /* Про мене */
-        .about {
-            background-color: #fff;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .about-card {
-            background: #fff;
-            border-radius: 20px;
-            padding: 3rem;
-            box-shadow: var(--shadow);
-            margin-bottom: 2rem;
-            position: relative;
-            z-index: 2;
-            transition: transform 0.3s ease;
-        }
-        
-        .about-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .about-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: var(--dark-purple);
-            font-weight: 600;
-        }
-        
-        .quote {
-            background-color: rgba(244, 242, 170, 0.3);
-            padding: 2rem;
-            border-left: 5px solid var(--orange);
-            border-radius: 0 15px 15px 0;
-            margin: 2rem 0;
-            font-style: italic;
-            font-size: 1.2rem;
-            font-weight: 500;
-            color: var(--dark-purple);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-        
-        /* Досвід */
-        .experience {
-            background: var(--gradient-purple);
-            color: var(--pale-yellow);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .experience .section-title {
-            color: var(--pale-yellow);
-        }
-        
-        .experience .section-title::after {
-            background-color: var(--pale-yellow);
-        }
-        
-        .experience-timeline {
-            position: relative;
-            padding-left: 30px;
-            margin-left: 3rem;
-            border-left: 2px solid var(--pale-yellow);
-        }
-        
-        .timeline-item {
-            position: relative;
-            padding-bottom: 2.5rem;
-        }
-        
-        .timeline-item:last-child {
-            padding-bottom: 0;
-        }
-        
-        .timeline-dot {
-            position: absolute;
-            left: -41px;
-            width: 20px;
-            height: 20px;
-            background: var(--orange);
-            border-radius: 50%;
-            border: 4px solid var(--pale-yellow);
-        }
-        
-        .timeline-date {
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            display: inline-block;
-            padding: 0.3rem 1rem;
-            background: rgba(244, 242, 170, 0.2);
-            border-radius: 20px;
-        }
-        
-        .timeline-title {
-            font-size: 1.4rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .experience-list {
-            list-style-type: none;
-            margin-top: 3rem;
-        }
-        
-        .experience-list li {
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-left: 2rem;
-        }
-        
-        .experience-list li::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 8px;
-            width: 12px;
-            height: 12px;
-            background-color: var(--orange);
-            border-radius: 50%;
-        }
-        
-        /* Візія */
-        .vision {
-            background-color: #fff;
-            overflow: hidden;
-        }
-        
-        .vision-card {
-            background: rgba(47, 33, 86, 0.03);
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            text-align: center;
-            position: relative;
-            z-index: 2;
-            transition: all 0.3s ease;
-        }
-        
-        .vision-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(47, 33, 86, 0.25);
-        }
-        
-        .vision-text {
-            font-size: 1.5rem;
-            line-height: 1.6;
-            font-weight: 500;
-            color: var(--dark-purple);
+            width: 80%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(244,242,170,0.2), transparent);
         }
         
         .highlight {
-            color: var(--orange);
-            font-weight: 600;
+            color: var(--orange-red);
+            font-weight: bold;
         }
         
-        /* Плани */
-        .plans {
-            background-color: var(--background);
+        .light-section {
+            background-color: var(--pale-yellow);
+            color: var(--text-on-light);
+            border-radius: 10px;
+            margin: 30px 40px;
+            padding: 25px;
             position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .light-section h3 {
+            color: var(--main-purple);
+        }
+        
+        .light-section ul li::before {
+            content: "►";
+            color: var(--main-purple);
+        }
+        
+        .ribbon {
+            width: 150px;
+            height: 150px;
             overflow: hidden;
-        }
-        
-        .plans-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .plan-card {
-            background: #fff;
-            border-radius: 20px;
-            padding: 2.5rem;
-            box-shadow: var(--shadow);
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            z-index: 2;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .plan-card::before {
-            content: '';
             position: absolute;
+            z-index: 10;
+        }
+        
+        .ribbon::before,
+        .ribbon::after {
+            position: absolute;
+            z-index: -1;
+            content: '';
+            display: block;
+            border: 5px solid var(--orange-red);
+        }
+        
+        .ribbon-top-right {
+            top: -10px;
+            right: -10px;
+        }
+        
+        .ribbon-top-right::before,
+        .ribbon-top-right::after {
+            border-top-color: transparent;
+            border-right-color: transparent;
+        }
+        
+        .ribbon-top-right::before {
             top: 0;
-            left: 0;
+            left: 30px;
+        }
+        
+        .ribbon-top-right::after {
+            bottom: 30px;
             right: 0;
-            height: 8px;
-            background: var(--orange);
         }
         
-        .plan-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(47, 33, 86, 0.25);
-        }
-        
-        .plan-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: var(--dark-purple);
-            font-weight: 600;
-            position: relative;
-            padding-bottom: 1rem;
-        }
-        
-        .plan-card h3::after {
-            content: '';
+        .ribbon-top-right span {
             position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: var(--orange);
-            border-radius: 1.5px;
-        }
-        
-        .plan-card ul {
-            list-style-type: none;
-            flex-grow: 1;
-        }
-        
-        .plan-card ul li {
-            margin-bottom: 1rem;
-            position: relative;
-            padding-left: 1.8rem;
-        }
-        
-        .plan-card ul li::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 8px;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: var(--dark-purple);
-        }
-        
-        .plan-card ul li ul {
-            margin-top: 0.8rem;
-        }
-        
-        .plan-card ul li ul li::before {
-            background: var(--orange);
-            width: 8px;
-            height: 8px;
-        }
-        
-        .plan-icon {
-            font-size: 2.5rem;
-            color: var(--orange);
-            margin-bottom: 1.5rem;
-        }
-        
-        /* Заклик до дії */
-        .cta {
-            background: var(--gradient-purple);
-            color: var(--pale-yellow);
+            top: 30px;
+            right: -25px;
+            transform: rotate(45deg);
+            width: 200px;
+            background: var(--orange-red);
+            padding: 10px 0;
             text-align: center;
-            padding: 5rem 0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .cta-content {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .cta h2 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: var(--pale-yellow);
-        }
-        
-        .cta p {
-            font-size: 1.5rem;
-            max-width: 700px;
-            margin: 0 auto 2.5rem;
-        }
-        
-        /* Кнопки */
-        .btn {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: var(--orange);
-            color: #fff;
-            font-size: 1rem;
-            font-weight: 600;
-            border-radius: 50px;
-            text-decoration: none;
-            box-shadow: 0 10px 20px rgba(230, 47, 27, 0.3);
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
+            font-size: 14px;
+            color: white;
+            font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 25px rgba(230, 47, 27, 0.4);
-        }
-        
-        .btn-outline {
-            background: transparent;
-            color: var(--pale-yellow);
-            border: 2px solid var(--pale-yellow);
-            box-shadow: none;
-        }
-        
-        .btn-outline:hover {
-            background: var(--pale-yellow);
-            color: var(--dark-purple);
-            box-shadow: 0 15px 25px rgba(244, 242, 170, 0.3);
-        }
-        
-        /* Підвал */
-        footer {
-            background: var(--dark-purple);
-            color: var(--pale-yellow);
-            padding: 5rem 0 2rem;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-        
-        .footer-logo {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--pale-yellow);
-        }
-        
-        .footer-desc {
-            margin-bottom: 1.5rem;
-            max-width: 300px;
-        }
-        
-        .footer-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            color: var(--pale-yellow);
-            position: relative;
-            padding-bottom: 0.8rem;
-        }
-        
-        .footer-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background: var(--orange);
-            border-radius: 1.5px;
-        }
-        
-        .footer-links {
-            list-style-type: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 0.8rem;
-        }
-        
-        .footer-links a {
-            color: rgba(244, 242, 170, 0.8);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .footer-links a:hover {
-            color: var(--orange);
-            padding-left: 5px;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-        
-        .social-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: rgba(244, 242, 170, 0.1);
-            color: var(--pale-yellow);
-            border-radius: 50%;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .social-link:hover {
-            background: var(--orange);
-            color: #fff;
-            transform: translateY(-5px);
-        }
-        
-        .contact-item {
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        
-        .contact-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: rgba(244, 242, 170, 0.1);
-            color: var(--orange);
-            border-radius: 50%;
-            font-size: 1.2rem;
-        }
-        
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(244, 242, 170, 0.2);
-        }
-        
-        /* Медіа-запити */
-        @media (max-width: 1200px) {
-            .header-title {
-                font-size: 3rem;
-            }
-            
-            .profile-picture {
-                width: 320px;
-                height: 320px;
-            }
-            
-            .profile-blob {
-                width: 360px;
-                height: 360px;
-            }
-        }
-        
-        @media (max-width: 992px) {
-            .header-content {
-                flex-direction: column-reverse;
-                text-align: center;
-                padding-top: 2rem;
-            }
-            
-            .header-text {
-                max-width: 100%;
-            }
-            
-            .header-title {
-                font-size: 2.8rem;
-            }
-            
-            .header-subtitle {
-                max-width: 100%;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            
-            .section-title {
-                font-size: 2.2rem;
-            }
-            
-            .experience-timeline {
-                margin-left: 2rem;
-            }
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
         }
         
         @media (max-width: 768px) {
-            header {
-                height: auto;
-                min-height: 100vh;
-                padding-top: 100px;
-                padding-bottom: 4rem;
+            .profile {
+                flex-direction: column;
+                text-align: center;
             }
             
-            .nav-links {
-                display: none;
+            .profile-image-container {
+                margin-right: 0;
+                margin-bottom: 30px;
             }
             
-            .mobile-menu-btn {
-                display: block;
+            h2::before, h2::after {
+                width: 30px;
             }
             
-            .header-title {
-                font-size: 2.5rem;
+            h2::before {
+                margin-left: -80px;
             }
             
-            .profile-picture {
-                width: 280px;
-                height: 280px;
+            h2::after {
+                margin-right: -80px;
             }
             
-            .profile-blob {
-                width: 320px;
-                height: 320px;
-            }
-            
-            section {
-                padding: 4rem 0;
-            }
-            
-            .experience-timeline {
-                margin-left: 1rem;
-                padding-left: 20px;
-            }
-            
-            .timeline-dot {
-                left: -31px;
-                width: 16px;
-                height: 16px;
-            }
-            
-            .cta h2 {
-                font-size: 2.2rem;
+            .section, .vision-box, .light-section {
+                margin: 20px;
             }
         }
         
-        @media (max-width: 576px) {
-            .header-title {
-                font-size: 2rem;
-            }
-            
-            .header-subtitle {
-                font-size: 1.2rem;
-            }
-            
-            .profile-picture {
-                width: 240px;
-                height: 240px;
-            }
-            
-            .profile-blob {
-                width: 280px;
-                height: 280px;
-            }
-            
-            .section-title {
-                font-size: 1.8rem;
-            }
-            
-            .about-card, .plan-card {
-                padding: 2rem;
-            }
-            
-            .footer-content {
-                grid-template-columns: 1fr;
-            }
+        /* Animation */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(230, 47, 27, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(230, 47, 27, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(230, 47, 27, 0); }
+        }
+        
+        .vision-box {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(45deg); }
+            50% { transform: translateY(-10px) rotate(45deg); }
+            100% { transform: translateY(0px) rotate(45deg); }
+        }
+        
+        .profile-image-bg {
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: var(--pale-yellow);
+            color: var(--main-purple);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin: 5px 5px 5px 0;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
         }
     </style>
 </head>
 <body>
-    <!-- Навігація -->
-    <nav id="navbar" class="navbar">
-        <div class="container">
-            <a href="#" class="nav-logo">СР <span>ІАТЕ</span></a>
-            <div class="nav-links">
-                <a href="#about">Про мене</a>
-                <a href="#experience">Досвід</a>
-                <a href="#vision">Візія</a>
-                <a href="#plans">Плани</a>
-                <a href="#contact">Контакти</a>
-            </div>
-            <button class="mobile-menu-btn">☰</button>
-        </div>
-    </nav>
-    
-    <!-- Шапка -->
-    <header id="home">
-        <div class="header-bg"></div>
-        <div class="shape shape-1"></div>
-        <div class="shape shape-2"></div>
-        <div class="shape shape-3"></div>
-        
-        <div class="container">
-            <div class="header-content">
-                <div class="header-text">
-                    <h1 class="header-title">Сапон Владислав Олександрович</h1>
-                    <p class="header-subtitle">Людина яка вміє діяти, слухати і знаходити рішення там, де інші бачать лише проблеми</p>
-                    <a href="#plans" class="btn">Моя програма</a>
-                </div>
-                
-                <div class="header-image">
-                    <div class="profile-blob"></div>
-                    <img src="Sapon.png" alt="Владислав Сапон" class="profile-picture">
-                </div>
-            </div>
-        </div>
-        
-        <a href="#about" class="scroll-down">
-            <span>Гортай вниз</span>
-            <span class="arrow">↓</span>
-        </a>
-    </header>
-    
-    <!-- Про мене -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">Про мене</h2>
+    <div class="container">
+        <div class="content">
+            <header>
+                <h1>Програма на голову СР ІАТЕ</h1>
+                <div class="subtitle">Сапон Владислав Олександрович</div>
+            </header>
             
-            <div class="about-card">
-                <h3>Хто я?</h3>
-                <p>Я Сапон Владислав Олександрович, і я балотуюсь на посаду голови студентської ради. Я —  людина яка вміє діяти, слухати і знаходити рішення там, де інші бачать лише проблеми. Я добре знаю, чим живе наша студентська спільнота, і хочу її покращити.</p>
-                
-                <div class="quote">
-                    "Моя мета — зробити студентський досвід в ІАТЕ максимально продуктивним та незабутнім для кожного студента"
+            <div class="hero-section">
+                <div class="profile">
+                    <div class="profile-image-container">
+                        <div class="profile-image-bg"></div>
+                        <img src="Sapon.png" alt="Фото Сапона Владислава" class="profile-image">
+                    </div>
+                    <div class="intro">
+                        <p>Я Сапон Владислав Олександрович, і я балотуюсь на посаду голови студентської ради. Я — <span class="highlight">людина яка вміє діяти, слухати і знаходити рішення</span> там, де інші бачать лише проблеми. Я добре знаю, чим живе наша студентська спільнота, і хочу її покращити.</p>
+                        
+                        <div style="margin-top: 20px">
+                            <span class="badge">Досвід</span>
+                            <span class="badge">Лідерство</span>
+                            <span class="badge">Відповідальність</span>
+                            <span class="badge">Інновації</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- Досвід -->
-    <section id="experience" class="experience">
-        <div class="shape shape-1"></div>
-        <div class="shape shape-2"></div>
-        
-        <div class="container">
-            <h2 class="section-title">Мій досвід та досягнення</h2>
             
-            <div class="experience-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Перші кроки</div>
-                    <h3 class="timeline-title">Голова відділу освітніх процесів</h3>
-                    <p>Я почав свій шлях в студраді очоливши новостворений відділ освітніх процесів. Протягом шести місяців на цій посаді я зміг надихнути відділ на активну роботу, поповнив його склад і поставив освітній на робочі рейки.</p>
-                </div>
+            <section class="section">
+                <div class="ribbon ribbon-top-right"><span>Досвід</span></div>
+                <h2>Мій досвід та досягнення</h2>
+                <p>Я почав свій шлях в студраді очоливши новостворений відділ освітніх процесів. Протягом шести місяців на цій посаді я зміг надихнути відділ на активну роботу, поповнив його склад і поставив освітній на робочі рейки. Пізніше я зайняв посаду секретаря СР ІАТЕ. В зоні моєї відповідальності входило: ведення документації, складання протоколів засідань, підготовка і проведення КСІ, складання кошторису студради, набір нових студкураторів та ще багато іншого.</p>
                 
-                                 <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-date">Розвиток</div>
-                            <h3 class="timeline-title">Секретар СР ІАТЕ</h3>
-                            <p>Пізніше я зайняв посаду секретаря СР ІАТЕ. В зоні моєї відповідальності входило: ведення документації, складання протоколів засідань, підготовка і проведення КСІ, складання кошторису студради, набір нових студкураторів та ще багато іншого.</p>
-                        </div>
-                        
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-date">Сьогодні</div>
-                            <h3 class="timeline-title">В.о. голови СР ІАТЕ</h3>
-                            <p>На початку цього навчального року я став виконуючим обов'язки голови нашої СР. З того моменту було пророблено багато важливої роботи.</p>
-                        </div>
-                        
-                        <h3 style="color: var(--pale-yellow); margin-top: 3rem; margin-bottom: 1.5rem;">Основні досягнення на посаді в.о. голови:</h3>
-                        <ul class="experience-list">
-                            <li>Започаткували традицію щомісячного звітування та планування діяльності кожного відділу та СР загалом.</li>
-                            <li>Перезапустили діяльність Проєктного відділу, знайшовши туди нового голову.</li>
-                            <li>Реорганізували діяльність: Медіа відділу, створивши підгрупу для ведення соціальних мереж; ІТ відділу, розформувавши один з підрозділів через його неефективність.</li>
-                            <li>Впровадили відкриту платформу менеджменту діяльності СР ІАТЕ, а саме платформу на основі GitHub.</li>
-                            <li>Налагодили співпрацю з Профбюро, Г.О. CENTURIA, компаніями CIKLUM та PLERDY, Студентським Конструкторським Бюро і доєдналися до міжуніверситетського ІТ-обʼєднання.</li>
-                            <li>Сформували перелік важливих регламентів діяльності студради.</li>
-                        </ul>
-                        
-                        </div>
-                        </div>
-                        </section>
-                        
-                        <!-- Візія -->
-                        <section id="vision" class="vision">
-                            <div class="container">
-                                <h2 class="section-title">Моя візія СР ІАТЕ</h2>
-                                
-                                <div class="vision-card">
-                                    <div class="vision-text">
-                                        <span class="highlight">Студентська Рада, як активний, прозорий та впливовий орган, що об'єднує студентів, захищає їхні інтереси та сприяє всебічному розвитку кожного члена спільноти.</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        
-                        <!-- Плани -->
-                        <section id="plans" class="plans">
-                            <div class="shape shape-3"></div>
-                            
-                            <div class="container">
-                                <h2 class="section-title">Мої плани на каденцію</h2>
-                                
-                                <div class="plans-grid">
-                                    <div class="plan-card">
-                                        <div class="plan-icon">🔄</div>
-                                        <h3>Внутрішня діяльність</h3>
-                                        <ul>
-                                            <li>Створення відділу роботи з абітурієнтами.</li>
-                                            <li>Створення відділу зовнішніх зв'язків.</li>
-                                            <li>Подальший розвиток та друк власного мерча СР.</li>
-                                            <li>Розробка та запуск сайту Студради.</li>
-                                            <li>Створення інституту відзнаки найактивніших учасників і ветеранів СР ІАТЕ.</li>
-                                            <li>Укорінення практики регулярних тімбілдінгів на рівні відділів і всієї СР.</li>
-                                            <li>Розвиток спільноти в Discord сервері СР.</li>
-                                        </ul>
-                                    </div>
-                                    
-                                    <div class="plan-card">
-                                        <div class="plan-icon">🌐</div>
-                                        <h3>Зовнішня діяльність</h3>
-                                        <ul>
-                                            <li>Поглиблення співпраці в межах міжуніверситетського ІТ-обʼєднання.</li>
-                                            <li>Збагачення медіапростору:
-                                                <ul>
-                                                    <li>Наповнення Instagram сторінки СР. З ціллю вийти на норму в два Reels на тиждень.</li>
-                                                    <li>Створення Stories з анонсом подкастів та івентів.</li>
-                                                    <li>Ведення YouTube-каналу Студради з регулярними подкастами та лекціями.</li>
-                                                </ul>
-                                            </li>
-                                            <li>Подальша співпраця з гуртками на НН ІАТЕ, компаніями, стартапами, для проведення івентів, лекцій, подкастів.</li>
-                                            <li>Налагодження комунікації з гуртожитками де заселені наші студенти.</li>
-                                            <li>Залучання фондів та організацій для закупівлі необхідного обладнання, а також пошук спонсорів.</li>
-                                            <li>Створення LinkedIn студради для кращої комунікації з партнерами.</li>
-                                        </ul>
-                                    </div>
-                                    
-                                    <div class="plan-card">
-                                        <div class="plan-icon">📚</div>
-                                        <h3>Якість освіти</h3>
-                                        <ul>
-                                            <li>Створення робочої групи для співпраці з Методичними комісіями факультетів. Переглядання силабусів з освітніх дисциплін.</li>
-                                            <li>Створення та оновлення гайдів для студентів про вступ, спеціальності, гуртки тощо.</li>
-                                            <li>Покращення комунікації зі старостами та студентством, організація регулярних зустрічей з керівниками катедр.</li>
-                                            <li>Реорганізація комунікації з приводу конфліктних ситуацій та потенційних проблем в ІАТЕ.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        
-                        <!-- Заклик до дії -->
-                        <section class="cta">
-                            <div class="shape shape-1"></div>
-                            <div class="shape shape-2"></div>
-                            
-                            <div class="container">
-                                <div class="cta-content">
-                                    <h2>Обирай майбутнє студентства разом зі мною!</h2>
-                                    <p>Давайте разом будувати потужну студентську спільноту, яка буде гордістю ІАТЕ</p>
-                                    <a href="#" class="btn">Підтримати кандидатуру</a>
-                                </div>
-                            </div>
-                        </section>
-                        
-                        <!-- Підвал -->
-                        <footer id="contact">
-                            <div class="container">
-                                <div class="footer-content">
-                                    <div>
-                                        <div class="footer-logo">СР ІАТЕ</div>
-                                        <p class="footer-desc">Студентська рада Інституту атомної та теплової енергетики - це команда активних студентів, які працюють для покращення студентського життя.</p>
-                                        
-                                        <div class="social-links">
-                                            <a href="#" class="social-link" title="Instagram">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                                                </svg>
-                                            </a>
-                                            <a href="#" class="social-link" title="Telegram">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path d="M21.2 7.78l-10.94 9.27a1 1 0 0 1-1.32 0l-4.9-4.2"></path>
-                                                    <path d="M22 2L11 13"></path>
-                                                    <path d="M22 2l-7 20l-4-9l-9-4l20-7z"></path>
-                                                </svg>
-                                            </a>
-                                            <a href="#" class="social-link" title="YouTube">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
-                                                    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-                                                </svg>
-                                            </a>
-                                            <a href="#" class="social-link" title="Discord">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path d="M18 9a5 5 0 0 0-5-5H9a5 5 0 0 0-5 5v7.5a2.5 2.5 0 0 0 2.5 2.5H10l1 3 1-3h4.5a2.5 2.5 0 0 0 2.5-2.5V9z"></path>
-                                                    <path d="M7.5 9a.5.5 0 1 0 0 1 .5.5 0 1 0 0-1"></path>
-                                                    <path d="M14.5 9a.5.5 0 1 0 0 1 .5.5 0 1 0 0-1"></path>
-                                                </svg>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    
-                                    <div>
-                                        <h3 class="footer-title">Швидкі посилання</h3>
-                                        <ul class="footer-links">
-                                            <li><a href="#about">Про мене</a></li>
-                                            <li><a href="#experience">Мій досвід</a></li>
-                                            <li><a href="#vision">Моя візія</a></li>
-                                            <li><a href="#plans">Плани на каденцію</a></li>
-                                        </ul>
-                                    </div>
-                                    
-                                    <div>
-                                        <h3 class="footer-title">Контакти</h3>
-                                        <div class="contact-item">
-                                            <div class="contact-icon">
-                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                                                </svg>
-                                            </div>
-                                            <span>+380 XX XXX XX XX</span>
-                                        </div>
-                                        <div class="contact-item">
-                                            <div class="contact-icon">
-                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                                    <polyline points="22,6 12,13 2,6"></polyline>
-                                                </svg>
-                                            </div>
-                                            <span>vladislav.sapon@sr-iate.com</span>
-                                        </div>
-                                        <div class="contact-item">
-                                            <div class="contact-icon">
-                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                                    <circle cx="12" cy="10" r="3"></circle>
-                                                </svg>
-                                            </div>
-                                            <span>КПІ ім. Ігоря Сікорського</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="footer-bottom">
-                                    <p>&copy; 2025 Студентська рада ІАТЕ. Всі права захищені.</p>
-                                </div>
-                            </div>
-                        </footer>
-                        
-                        <script>
-                            // Плавна прокрутка до секцій
-                            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                                anchor.addEventListener('click', function (e) {
-                                    e.preventDefault();
-                                    
-                                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                                        behavior: 'smooth'
-                                    });
-                                });
-                            });
-                            
-                            // Зміна навігації при прокрутці
-                            window.addEventListener('scroll', () => {
-                                const navbar = document.getElementById('navbar');
-                                if (window.scrollY > 100) {
-                                    navbar.classList.add('scrolled');
-                                } else {
-                                    navbar.classList.remove('scrolled');
-                                }
-                            });
-                            
-                            // Мобільне меню
-                            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-                            const navLinks = document.querySelector('.nav-links');
-                            
-                            mobileMenuBtn.addEventListener('click', () => {
-                                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-                            });
-                            
-                            // Адаптація для мобільних пристроїв
-                            window.addEventListener('resize', () => {
-                                if (window.innerWidth > 768) {
-                                    navLinks.style.display = 'flex';
-                                } else {
-                                    navLinks.style.display = 'none';
-                                }
-                            });
-                        </script>
-                        </body>
-                        </html>
+                <p>На початку цього навчального року я став виконуючим обов'язки голови нашої СР. З того моменту було пророблено багато важливої роботи, з основного:</p>
+                <ol class="achievement-list">
+                    <li> Започаткували традицію щомісячного звітування та планування діяльності кожного відділу та СР загалом.</li>
+                    <li> Перезапустили діяльність Проєктного відділу, знайшовши туди нового голову.</li>
+                    <li> Реорганізували діяльність: Медіа відділу, створивши підгрупу для ведення соціальних мереж; ІТ відділу, розформувавши один з підрозділів через його неефективність.</li>
+                    <li> Впровадили відкриту платформу менеджменту діяльності СР ІАТЕ, а саме платформу на основі GitHub.</li>
+                    <li> Налагодили співпрацю з Профбюро, Г.О. CENTURIA, компаніями CIKLUM та PLERDY, Студентським Конструкторським Бюро і доєдналися до міжуніверситетського ІТ-обʼєднання.</li>
+                    <li> Сформували перелік важливих регламентів діяльності студради.</li>
+                </ol>
+            </section>
+            
+            <div class="vision-box">
+                <h2>Візія нашої СР</h2>
+                <p>Моя візія — це Студентська Рада, як активний, прозорий та впливовий орган, що об'єднує студентів, захищає їхні інтереси та сприяє всебічному розвитку кожного члена спільноти.</p>
+            </div>
+            
+            <h2>Мої плани на каденцію</h2>
+            
+            <div class="plans-container">
+                <div class="plan-column">
+                    <div class="light-section">
+                        <h3>Внутрішня діяльність</h3>
+                        <ul>
+                            <li>Створення відділу підтримки студентів, який буде займатись індивідуальними проблемами та запитами</li>
+                <li>Розробка та затвердження регламентів роботи всіх відділів СР</li>
+                <li>Впровадження системи оцінки ефективності роботи кожного відділу</li>
+                <li>Організація регулярних тренінгів для членів студради з розвитку лідерських навичок</li>
+                <li>Вдосконалення процесу онбордингу нових членів студради</li>
+            </ul>
+        </div>
+        
+        <div class="light-section">
+            <h3>Освітній процес</h3>
+            <ul>
+                <li>Запуск програми студентського менторства для першокурсників</li>
+                <li>Організація додаткових практичних воркшопів з профільних дисциплін</li>
+                <li>Створення бази корисних навчальних матеріалів, зібраних студентами</li>
+                <li>Налагодження прямого каналу комунікації з викладачами для вирішення освітніх питань</li>
+                <li>Запровадження регулярних зустрічей зі студентами для збору зворотного зв'язку щодо якості освіти</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="plan-column">
+        <div class="light-section">
+            <h3>Комунікація та співпраця</h3>
+            <ul>
+                <li>Розвиток офіційних каналів комунікації студради в соціальних мережах</li>
+                <li>Розширення співпраці з IT-компаніями для організації стажувань та практик</li>
+                <li>Налагодження взаємодії з іншими факультетами університету</li>
+                <li>Створення платформи для обміну досвідом з студрадами інших закладів вищої освіти</li>
+                <li>Організація щомісячних відкритих зустрічей з адміністрацією інституту</li>
+            </ul>
+        </div>
+        
+        <div class="light-section">
+            <h3>Проєкти та ініціативи</h3>
+            <ul>
+                <li>Запуск серії науково-технічних хакатонів ІАТЕ</li>
+                <li>Організація ярмарку кар'єри за участю провідних IT-компаній</li>
+                <li>Створення спільної з роботодавцями програми стажувань для студентів</li>
+                <li>Впровадження екологічних ініціатив на території інституту</li>
+                <li>Розвиток системи мотивації та визнання для активних студентів</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Прозорість та підзвітність</h2>
+    <ul>
+        <li>Продовження практики щомісячних публічних звітів про діяльність СР</li>
+        <li>Відкрите ведення документації та прозора звітність щодо використання коштів</li>
+        <li>Впровадження системи моніторингу виконання планів та зобов'язань</li>
+        <li>Створення публічного трекера завдань для відстеження прогресу роботи студради</li>
+        <li>Регулярні опитування студентів щодо задоволеності роботою студради</li>
+    </ul>
+</div>
+
+<div class="diamond-separator">
+    <div class="diamond"></div>
+</div>
+
+<div class="section">
+    <h2>Чому саме я?</h2>
+    <p>Я маю досвід роботи на різних посадах у студентській раді, що дозволило мені детально вивчити всі аспекти її функціонування. Моє перебування на посаді в.о. голови СР ІАТЕ вже принесло конкретні результати, які я планую розвивати далі.</p>
+    
+    <p>Я вірю в потенціал кожного студента та готовий працювати над створенням середовища, де кожен може реалізувати свої здібності. Моя команда складається з відданих справі людей, які поділяють цінності відкритості, інноваційності та студентоцентризму.</p>
+    
+    <p>Обравши мене головою СР ІАТЕ, ви обираєте <span class="highlight">стабільність, розвиток та прозорість</span>!</p>
+</div>
+
+<footer>
+    <p>© 2025 Сапон Владислав | Кандидат на посаду голови СР ІАТЕ</p>
+    <p>Зв'язатися зі мною: <span class="highlight">sapon.vladyslav@example.com</span></p>
+</footer>
+</div>
+</div>
